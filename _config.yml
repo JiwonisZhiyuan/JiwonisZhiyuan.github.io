@@ -1,0 +1,84 @@
+# https://velog.io/@dlruddms5619/Git-Git-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B03-jekyll-theme-%EC%A0%81%EC%9A%A9
+#Site settings
+site: Ephesus
+title: JiwonisZhiyuan
+keywords: medical, deep learning, blog
+description: >-
+  Jiwon's dev log
+lang: en-US
+timezone:  Asia/Seoul
+repo: https://github.com/JiwonisZhiyuan # site repo [optional]
+google_verify:      XXX # Put your Google Verification here
+google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
+discus-identifier:  XXX
+
+# Author settings
+author:
+  name: Jiwon Jung
+  bio: Medical Deep Learning Developer
+  picture: assets/images/profile.png 
+  github: JiwonisZhiyuan # github username
+  email: alwaysjiwonish@gmail.com # email adress
+  # twitter: onepase # twitter username
+  # facebook: onepase # facebook username
+  # instagram: onepase # instagram username
+  # youtube: https://www.youtube.com/channel/UCMmAto-wxBootXN91AzBiDg # youtube username
+  # linkedin: hakantorun # linkedin username
+
+
+# URL settings
+url: "JiwonisZhiyuan.github.io" # Domain Name of host. [username].github.io for github pages
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+paginate: 10
+paginate_path: "/page/:num"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: false
